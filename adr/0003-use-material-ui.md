@@ -13,3 +13,5 @@ React web applications are built using components. Component libraries make it m
 ## Decision Outcome
 
 Chosen option: MaterialUI, because it's well-supported and well-used, it's free and licensed under the MIT license, and I don't think it's worth the effort to create my own components at this time.
+
+Bonus: MaterialUI uses Roboto, my preferred personal font, by default.
