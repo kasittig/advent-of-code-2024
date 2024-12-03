@@ -6,9 +6,9 @@ React web applications are built using components. Component libraries make it m
 
 ## Considered Options
 
-* [MaterialUI](https://mui.com/material-ui/)
-* Create my own components
-* Some other option
+- [MaterialUI](https://mui.com/material-ui/)
+- Create my own components
+- Some other option
 
 ## Decision Outcome
 

@@ -8,9 +8,9 @@ In order to participate in the 2024 challenge, I need to pick a programming lang
 
 ## Considered Options
 
-* Python
-* JavaScript
-* Rust
+- Python
+- JavaScript
+- Rust
 
 ## Decision Outcome
 
