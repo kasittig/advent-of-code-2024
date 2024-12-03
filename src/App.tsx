@@ -1,23 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Grid from "@mui/material/Grid2";
+import DayCard from "./Day";
+import "./App.css";
 
 function App() {
+  const components = [];
+  for (let i = 1; i <= 25; i++) {
+    components.push(
+      <Grid key={i}>
+        <DayCard day={i} />
+      </Grid>,
+    );
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          Learn React
-        </a>
+          {components}
+        </Grid>
       </header>
     </div>
   );
