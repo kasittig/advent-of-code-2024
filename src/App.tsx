@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Container>
+        <Container sx={{ margin: 4 }}>
           <Grid
             container
             spacing={{ xs: 2, md: 3 }}

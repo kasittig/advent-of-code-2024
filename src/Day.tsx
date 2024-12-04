@@ -20,22 +20,39 @@ function getCardColor(day: number) {
   }
 }
 
+const today = new Date();
+
+function getCardIcon(day: number) {
+  const buttonDate = new Date(`2024-12-${day}`);
+  const aoc_url = `https://adventofcode.com/2024/day/${day}`;
+  if (buttonDate <= today) {
+    return (
+      <IconButton aria-label="Advent of Code puzzle" href={aoc_url}>
+        <StarIcon />
+      </IconButton>
+    );
+  } else {
+    return (
+      <IconButton>
+        <StarIcon color="disabled" />
+      </IconButton>
+    );
+  }
+}
+
 function DayCard(props: DayCardProps) {
-  const aoc_link = `https://adventofcode.com/2024/day/${props.day}`;
   const color = getCardColor(props.day);
   return (
     <Card sx={{ borderRadius: "16px", bgcolor: color }} variant="outlined">
       <CardContent>
         <Grid display="flex" justifyContent="center" alignItems="center">
-          <Typography variant="h3" color="#FFFFFF">
+          <Typography variant="h3" color="#FFFFFF" fontFamily="monospace">
             {props.day}
           </Typography>
         </Grid>
       </CardContent>
       <CardActions sx={{ justifyContent: "right" }}>
-        <IconButton aria-label="Advent of Code puzzle" href={aoc_link}>
-          <StarIcon />
-        </IconButton>
+        {getCardIcon(props.day)}
       </CardActions>
     </Card>
   );
