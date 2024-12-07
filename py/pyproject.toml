@@ -4,4 +4,17 @@ version = "0.1.0"
 description = "Advent of Code Solutions - 2024"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "click>=8.1.7",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
+
+[tool.pyright]
+venvPath = "."          # uv installs the venv in the current dir
+venv = ".venv"          #       in a folder called `.venv`
+strict = ["**/*.py"]    # use 'strict' checking on all files
+pythonVersion = "3.10"  # if library, specify the _lowest_ you support
