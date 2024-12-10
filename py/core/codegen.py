@@ -1,5 +1,3 @@
-import os
-
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 from core.utils import get_default_solution_filename, get_default_test_filename
@@ -17,11 +15,3 @@ def generate_daily_template(day: str) -> None:
     test_stub = test_template.render(day=day)
     with open(get_default_test_filename(day), "w") as test_file:
         test_file.write(test_stub)
-
-
-def get_days() -> list[str]:
-    days: list[str] = []
-    for i in range(25):
-        if os.path.exists(get_default_solution_filename(str(i))):
-            days.append(str(i))
-    return days

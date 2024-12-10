@@ -14,11 +14,11 @@ def get_default_input_filename(day: str) -> str:
 
 
 def get_default_solution_filename(day: str) -> str:
-    return f"daily_solutions/solutions/day_{day}.py"
+    return f"solutions/day_{day}.py"
 
 
 def get_default_test_filename(day: str) -> str:
-    return f"daily_solutions/solutions/tests/test_day_{day}.py"
+    return f"solutions/tests/test_day_{day}.py"
 
 
 def group_entries_by_line_break(input_lines: list[str]) -> list[list[str]]:
