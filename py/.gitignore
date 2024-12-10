@@ -9,3 +9,6 @@
 
 # Ignore parent directory
 ../*
+
+# Don't check in puzzle inputs
+inputs/*
