@@ -12,10 +12,10 @@ class Day1SolutionTestCase(TestCase):
         self.data = self.solution.format_data(example)
 
     def test_solve_part_1(self) -> None:
-        self.assertEqual(None, self.solution.solve_part_1(self.data))
+        self.assertEqual(11, self.solution.solve_part_1(self.data))
 
     def test_solve_part_2(self) -> None:
-        self.assertEqual(None, self.solution.solve_part_2(self.data))
+        self.assertEqual(31, self.solution.solve_part_2(self.data))
 
 
 class Day1HelpersTestCase(TestCase):
