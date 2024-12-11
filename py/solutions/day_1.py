@@ -1,6 +1,5 @@
-from collections import defaultdict
-
 from .base import BaseDailySolution
+from core.utils import get_frequency_counts
 
 
 class Day1Solution(BaseDailySolution):
@@ -33,9 +32,7 @@ class Day1Solution(BaseDailySolution):
     def solve_part_2(cls, input_data: tuple[list[int], list[int]]) -> int:
         list_1, list_2 = input_data
 
-        list_2_counts: dict[int, int] = defaultdict(int)
-        for elt in list_2:
-            list_2_counts[elt] += 1
+        list_2_counts: dict[int, int] = get_frequency_counts(list_2)
 
         similarity_score = 0
         for elt in list_1:
