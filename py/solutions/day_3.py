@@ -29,24 +29,31 @@ class Day3Solution(BaseDailySolution):
     @classmethod
     def solve_part_2(cls, input_data: list[str]) -> int:
         """
+        There are two new instructions you'll need to handle:
+        - The do() instruction enables future mul instructions.
+        - The don't() instruction disables future mul instructions.
+
         Strategy:
         - Find indexes for the (stop, start) operator pairs
         - Remove the data at these entries
         - Add together the resulting strings
+
+        IMPORTANT!!! Data is split over multiple lines but is one continuous entry
         """
         total = 0
 
-        for data in input_data:
-            while data:
-                stop_idx = find_stop(data)
-                start_idx = find_start(data)
+        data = "".join(input_data)
 
-                if stop_idx:
-                    total += cls.solve_part_1(data[:stop_idx])
-                    data = data[start_idx:] if start_idx else None
-                else:
-                    total += cls.solve_part_1([data])
+        while data:
+            stop_idx = find_stop(data)
 
-                total += cls.solve_part_1([data[:stop_idx]])
-                data = data[start_idx:] if start_idx else None
+            if stop_idx:
+                entry, rest = data[:stop_idx], data[stop_idx:]
+                total += cls.solve_part_1([entry])
+                start_idx = find_start(rest)
+                data = rest[start_idx:]
+            else:
+                total += cls.solve_part_1([data])
+                data = None
+
         return total
