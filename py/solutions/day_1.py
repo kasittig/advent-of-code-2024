@@ -2,10 +2,6 @@ from collections import defaultdict
 
 from .base import BaseDailySolution
 
-"""
-FLAVORTEXT HERE
-"""
-
 
 class Day1Solution(BaseDailySolution):
     DAY = 1
