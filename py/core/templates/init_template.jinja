@@ -1,0 +1,4 @@
+from .base import BaseDailySolution as BaseDailySolution  # pyright: ignore [reportUnusedImport]
+{% for day in days -%}
+from .day_{{ day }} import Day{{ day }}Solution as Day{{ day }}Solution  # pyright: ignore [reportUnusedImport]
+{% endfor %}
