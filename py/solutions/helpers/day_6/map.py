@@ -1,4 +1,5 @@
 from solutions.helpers.day_6.guard import LabGuard
+from solutions.helpers.grid_utils import parse_symbol_locations
 
 
 class LabGuardMap:
@@ -8,13 +9,10 @@ class LabGuardMap:
         self.start_loc: tuple[int, int] = 0, 0
 
         self.base_obstacles: list[tuple[int, int]] = []
+        symbol_locations = parse_symbol_locations(data)
 
-        for i in range(self.rows):
-            for j in range(self.cols):
-                if data[i][j] == "^":
-                    self.start_loc = i, j
-                elif data[i][j] == "#":
-                    self.base_obstacles.append((i, j))
+        self.start_loc = symbol_locations["^"][0]
+        self.base_obstacles = symbol_locations["#"]
 
         self.obstacles: set[tuple[int, int]] = set(self.base_obstacles)
         self.guard = LabGuard(self.start_loc)
