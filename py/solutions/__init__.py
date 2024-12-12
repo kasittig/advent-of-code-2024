@@ -3,3 +3,4 @@ from .day_1 import Day1Solution as Day1Solution  # pyright: ignore [reportUnused
 from .day_2 import Day2Solution as Day2Solution  # pyright: ignore [reportUnusedImport]
 from .day_3 import Day3Solution as Day3Solution  # pyright: ignore [reportUnusedImport]
 from .day_4 import Day4Solution as Day4Solution  # pyright: ignore [reportUnusedImport]
+from .day_5 import Day5Solution as Day5Solution  # pyright: ignore [reportUnusedImport]
