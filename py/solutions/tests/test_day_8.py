@@ -28,15 +28,15 @@ class Day8SolutionTestCase(TestCase):
         self.assertEqual(14, self.solution.solve_part_1(self.data))
 
     def test_solve_part_2(self) -> None:
-        self.assertEqual(0, self.solution.solve_part_2(self.data))
+        self.assertEqual(34, self.solution.solve_part_2(self.data))
 
 
 class Day8HelpersTestCase(TestCase):
     def test_get_antinode_locations(self) -> None:
-        antinodes = AntennaGrid.locate_potential_antinodes((3, 4), (5, 5))
+        antinodes = AntennaGrid.locate_antinodes_part_1((3, 4), (5, 5))
         assert (1, 3) in antinodes
         assert (7, 6) in antinodes
 
-        antinodes = AntennaGrid.locate_potential_antinodes((5, 5), (3, 4))
+        antinodes = AntennaGrid.locate_antinodes_part_1((5, 5), (3, 4))
         assert (1, 3) in antinodes
         assert (7, 6) in antinodes
