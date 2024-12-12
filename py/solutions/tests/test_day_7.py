@@ -1,6 +1,7 @@
 from unittest import TestCase
 
 from solutions.day_7 import Day7Solution
+from solutions.helpers.day_7 import get_possible_totals
 
 
 example = [
@@ -25,9 +26,11 @@ class Day7SolutionTestCase(TestCase):
         self.assertEqual(3749, self.solution.solve_part_1(self.data))
 
     def test_solve_part_2(self) -> None:
-        self.assertEqual(0, self.solution.solve_part_2(self.data))
+        self.assertEqual(11387, self.solution.solve_part_2(self.data))
 
 
 class Day7HelpersTestCase(TestCase):
-    def test_helper(self) -> None:
-        pass
+    def test_get_possible_totals(self) -> None:
+        assert 156 in get_possible_totals([15, 6], 156, concatenate=True)
+        assert 7290 in get_possible_totals([6, 8, 6, 15], 7290, concatenate=True)
+        assert 192 in get_possible_totals([17, 8, 14], 192, concatenate=True)

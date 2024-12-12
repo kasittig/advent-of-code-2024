@@ -46,8 +46,19 @@ class Day7Solution(BaseDailySolution):
     @classmethod
     def solve_part_2(cls, input_data: Any) -> int:
         """
+        Insert *, +, or || to make expressions correct
+
+        Sum up total value of all correctable expressions
+
+        ***Concatenate combines the numbers after both sides have been evaluated***
 
         :param input_data:
         :return:
         """
-        return 0
+        result = 0
+
+        for limit, entries in input_data:
+            totals = get_possible_totals(entries, limit, concatenate=True)
+            if limit in totals:
+                result += limit
+        return result
