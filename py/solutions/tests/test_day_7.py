@@ -3,7 +3,6 @@ from unittest import TestCase
 from solutions.day_7 import Day7Solution
 from solutions.helpers.day_7 import get_possible_totals
 
-
 example = [
     "190: 10 19",
     "3267: 81 40 27",

@@ -1,5 +1,6 @@
-from .base import BaseDailySolution
 from solutions.helpers.day_6 import LabGuardMap
+
+from .base import BaseDailySolution
 
 
 def check_obstacle(obstacle: tuple[int, int], lab_map: LabGuardMap) -> bool:

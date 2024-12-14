@@ -1,7 +1,6 @@
 from unittest import TestCase
 
-from solutions.day_9 import Day9Solution, expand_file, compress_file
-
+from solutions.day_9 import Day9Solution, compress_file, expand_file
 
 example: list[str] = ["2333133121414131402"]
 

@@ -2,7 +2,6 @@ from unittest import TestCase
 
 from solutions.day_6 import Day6Solution, check_obstacle
 
-
 example = [
     "....#.....",
     ".........#",

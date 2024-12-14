@@ -1,5 +1,6 @@
-from jinja2 import Environment, PackageLoader, select_autoescape
 import os
+
+from jinja2 import Environment, PackageLoader, select_autoescape
 
 from core.utils import get_default_solution_filename, get_default_test_filename
 

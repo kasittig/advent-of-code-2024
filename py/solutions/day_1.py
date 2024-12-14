@@ -1,5 +1,6 @@
-from .base import BaseDailySolution
 from core.utils import get_frequency_counts
+
+from .base import BaseDailySolution
 
 
 class Day1Solution(BaseDailySolution):

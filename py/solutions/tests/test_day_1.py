@@ -2,7 +2,6 @@ from unittest import TestCase
 
 from solutions.day_1 import Day1Solution
 
-
 example = ["3   4", "4   3", "2   5", "1   3", "3   9", "3   3"]
 
 

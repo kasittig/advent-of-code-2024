@@ -1,7 +1,7 @@
+import inspect
 import traceback
 from cmd import Cmd
 from importlib import reload
-import inspect
 from types import ModuleType
 
 import solutions

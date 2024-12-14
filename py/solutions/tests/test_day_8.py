@@ -1,7 +1,6 @@
 from unittest import TestCase
 
-from solutions.day_8 import Day8Solution, AntennaGrid
-
+from solutions.day_8 import AntennaGrid, Day8Solution
 
 example: list[str] = [
     "............",

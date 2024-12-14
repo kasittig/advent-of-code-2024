@@ -2,7 +2,6 @@ from unittest import TestCase
 
 from solutions.day_4 import Day4Solution, WordSearchGrid
 
-
 example = [
     "MMMSXXMASM",
     "MSAMXMSMSA",

@@ -1,7 +1,8 @@
 from typing import Any
 
-from .base import BaseDailySolution
 from solutions.helpers.grid_utils import parse_symbol_locations
+
+from .base import BaseDailySolution
 
 
 class AntennaGrid:

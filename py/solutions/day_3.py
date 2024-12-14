@@ -20,7 +20,9 @@ class Day3Solution(BaseDailySolution):
     def solve_part_1(cls, input_data: list[str]) -> int:
         total = 0
         for data in input_data:
-            data_matches: list[tuple[str, str]] = re.findall("mul\((\d+),(\d+)\)", data)
+            data_matches: list[tuple[str, str]] = re.findall(
+                "mul\((\d+),(\d+)\)", data
+            )
             for a, b in data_matches:
                 total += int(a) * int(b)
 
