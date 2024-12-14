@@ -18,3 +18,10 @@ venvPath = "."          # uv installs the venv in the current dir
 venv = ".venv"          #       in a folder called `.venv`
 strict = ["**/*.py"]    # use 'strict' checking on all files
 pythonVersion = "3.10"  # if library, specify the _lowest_ you support
+
+[tool.ruff]
+line-length = 87
+
+[tool.ruff.format]
+docstring-code-format = true
+
